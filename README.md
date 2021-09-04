@@ -14,7 +14,7 @@ Une série d'exemples étape par étape qui vous expliquent comment faire foncti
 
 Step 1: clonez le projet en utilisant les commandes ci-dessous :
 ```
-git clone https://github.com/assimmht/stockx.git
+git clone https://github.com/assimmht/stockx_market.git
 ```
 Step 2: allez dans le dossier :
 ```
