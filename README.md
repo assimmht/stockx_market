@@ -61,4 +61,4 @@ pause: 10h00
 reprise: 10h30
 pause: 14h00
 
-Durée Toatal: 11h50
+Durée Total: 11h50
