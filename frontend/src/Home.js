@@ -2,22 +2,25 @@ import React, { useEffect, useState } from 'react';
 import './Home.css'
 import Product from './Product';
 import img from './img_banner.png';
-import axios from './axios';
+// import axios from './axios';
+import axios from 'axios';
 
 function Home() {
 
     const [dataProduct, setDataProduct] = useState([]);
 
     const fetchData = async() => {
-        await axios.get('/api/browse')
+        // await axios.get('/api/browse')
+        await axios.get('https://stockx.com/api/browse?productCategory=sneakers&sort=release_date&order=ASC&releaseTime=gte-1631145600&country=FR')
             .then((res)=>{
                 setDataProduct(res.data.Products);
+                console.log(dataProduct)
             })   
      }
 
     useEffect(() => {
         fetchData();
-    });
+    }, []);
 
     return (
         <div className="home">

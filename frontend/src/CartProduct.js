@@ -21,7 +21,7 @@ function CartProduct({ id, title, image, price, releaseDate }) {
 
     return (
         <div className="product">
-           <img src={image} />  
+           <img className="product__image" src={image} />  
             <div className="product__info">
              <p>{title}</p>
               <p className="product__price">

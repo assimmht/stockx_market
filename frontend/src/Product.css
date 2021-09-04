@@ -7,7 +7,7 @@
     border: 1px solid rgb(203, 230, 253);
   }
   
-  .product > img {
+  .product__image {
     max-height: 200px;
     margin: 10px;
     object-fit: contain;

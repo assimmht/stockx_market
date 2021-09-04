@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import axios from './axios';
 import './DetailProduct.css';
 import { useParams } from "react-router-dom";
+// import axios from './axios';
+import axios from 'axios';
+import Product from './Product';
 
 
 function DetailProduct() {
@@ -11,7 +13,8 @@ function DetailProduct() {
     const [productInfo, setProductInfo] = useState([]);
 
     const fetchData = async() => {
-        await axios.get(`/detailproduct/${urlKey}`)
+        // await axios.get(`/detailproduct/${urlKey}`)
+        await axios.get(`https://stockx.com/api/products/${urlKey}?includes=market,360&currency=EUR&country=FR`)
             .then((res)=>{
                 setProductInfo(res.data.Product);
             })   
@@ -19,13 +22,13 @@ function DetailProduct() {
 
     useEffect(() => {
         fetchData();
-    });
+    }, []);
 
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     return (
         <div className="detailProduct">
-            <img src={productInfo.media['imageUrl']} />  
+            {/* <img className="detailProduct__img" src={productInfo.media['imageUrl']} />   */}
             <div className="detailProduct__info">
              <p className="detailProduct__title">{productInfo.title}</p>
              <p className="detailProduct__description">{productInfo.description}</p>
@@ -35,7 +38,6 @@ function DetailProduct() {
               <p className="detailProduct__releaseDate">
                   Sortie le {new Date(productInfo.releaseDate).toLocaleDateString("fr-FR", options)}
               </p>
-            <button className="detailProduct__button">Ajouter du panier</button>
             </div>
         </div>
     )

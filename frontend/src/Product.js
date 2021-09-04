@@ -28,12 +28,13 @@ function Product({ id, title, image, price, releaseDate, urlKey }) {
  };
 
     return (
-        <Link to={{
+        <div className="product">
+         <Link to={{
             pathname: "/detailproduct/"+urlKey,
             state: {urlKey: urlKey} 
           }} style={{ textDecoration: 'none' }}>
-        <div className="product">
-           <img src={image} />  
+           <img className="product__image" src={image} /> 
+           </Link> 
             <div className="product__info">
              <p>{title}</p>
               <p className="product__price">
@@ -45,7 +46,6 @@ function Product({ id, title, image, price, releaseDate, urlKey }) {
             <button onClick={ajouteraupanier} className="product__button">Ajouter au panier</button>
             </div>
         </div>
-        </Link>
     )
 }
 

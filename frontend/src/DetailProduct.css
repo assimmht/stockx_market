@@ -6,7 +6,7 @@
     margin-left: 100px;
   }
   
-  .detailProduct > img {
+  .detailProduct__img {
     max-height: 400px;
     margin: 10px;
     padding-right: 20px;
