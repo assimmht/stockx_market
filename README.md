@@ -43,22 +43,3 @@ Step 7: démarrez le projet avec :
 ```
 npm start
 ```
-
-## Horaire de travail
-
-début: 17h40
-pause: 18h00
-
-reprise: 19h00
-pause: 21h00
-
-reprise: 22h00
-pause: 01h00
-
-reprise: 08h00
-pause: 10h00
-
-reprise: 10h30
-pause: 14h00
-
-Durée Total: 11h50
